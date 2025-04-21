@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "676036089118",
+    "project_id": "zoro-b0c58",
+    "storage_bucket": "zoro-b0c58.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676036089118:android:2ea1c9f335a2f481c0250f",
+        "android_client_info": {
+          "package_name": "com.example.eduapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs4JJDsKpel1E8ObiXE_ZCzBLaNaCihuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676036089118:android:361c7aaf7676934fc0250f",
+        "android_client_info": {
+          "package_name": "com.example.zoro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs4JJDsKpel1E8ObiXE_ZCzBLaNaCihuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
