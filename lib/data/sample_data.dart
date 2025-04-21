@@ -8,167 +8,163 @@ final List<Map<String, String>> categories = [
   {'name': 'Arts', 'icon': 'palette', 'color': '#f39c12'},
 ];
 
+// Sample courses for testing
 final List<Course> sampleCourses = [
   Course(
     id: '1',
-    title: 'Flutter for Beginners',
+    title: 'Flutter Masterclass',
     description:
-        'Learn Flutter from the ground up. This course covers everything you need to know to get started with Flutter development.',
+        'Learn Flutter from scratch and build beautiful cross-platform apps',
     imageUrl: 'https://placehold.co/600x400/3498db/FFFFFF.png?text=Flutter',
     category: 'Programming',
-    duration: 420, // 7 hours
-    lessonsCount: 12,
+    duration: 1200, // 20 hours
+    lessonsCount: 42,
     rating: 4.8,
-    creatorId: 'c1', // Professor Smith
-    price: 49.99,
-    isFree: false,
     lessons: [
       Lesson(
-        id: '1-1',
+        id: '1_1',
         title: 'Introduction to Flutter',
-        description: 'Learn what Flutter is and how it works',
-        duration: 20,
-        videoUrl: 'https://example.com/flutter-intro',
-        isPreview: true, // Preview lesson is free
-        quiz: [
-          QuizQuestion(
-            question: 'What programming language does Flutter use?',
-            options: ['Java', 'Kotlin', 'Swift', 'Dart'],
-            correctAnswerIndex: 3,
-          ),
-          QuizQuestion(
-            question: 'Which company developed Flutter?',
-            options: ['Apple', 'Google', 'Microsoft', 'Facebook'],
-            correctAnswerIndex: 1,
-          ),
-        ],
-      ),
-      Lesson(
-        id: '1-2',
-        title: 'Setting up your Flutter Environment',
-        description: 'Install and configure Flutter on your machine',
-        duration: 30,
-        videoUrl: 'https://example.com/flutter-setup',
-      ),
-      Lesson(
-        id: '1-3',
-        title: 'Creating Your First Flutter App',
-        description: 'Build a simple app with Flutter',
-        duration: 45,
-        videoUrl: 'https://example.com/first-flutter-app',
-      ),
-    ],
-  ),
-  Course(
-    id: '2',
-    title: 'Basic Algebra',
-    description:
-        'Master the fundamentals of algebra including equations, functions, and graphs.',
-    imageUrl: 'https://placehold.co/600x400/e74c3c/FFFFFF.png?text=Algebra',
-    category: 'Mathematics',
-    duration: 300, // 5 hours
-    lessonsCount: 10,
-    rating: 4.5,
-    creatorId: 'c2', // Dr. Rebecca Johnson
-    price: 29.99,
-    isFree: false,
-    lessons: [
-      Lesson(
-        id: '2-1',
-        title: 'Introduction to Algebra',
-        description: 'Basic concepts and notations in algebra',
-        duration: 25,
-        videoUrl: 'https://example.com/algebra-intro',
+        description: 'Overview of Flutter and its features',
+        duration: 15,
+        videoUrl: 'https://example.com/video1.mp4',
         isPreview: true,
       ),
       Lesson(
-        id: '2-2',
-        title: 'Solving Linear Equations',
-        description: 'Learn how to solve equations with one variable',
-        duration: 35,
-        videoUrl: 'https://example.com/linear-equations',
-        quiz: [
-          QuizQuestion(
-            question: 'Solve for x: 3x + 5 = 20',
-            options: ['x = 5', 'x = 15', 'x = 3', 'x = 7.5'],
-            correctAnswerIndex: 0,
-          ),
-        ],
+        id: '1_2',
+        title: 'Setting Up Your Development Environment',
+        description: 'Installing Flutter SDK and configuring your IDE',
+        duration: 25,
+        videoUrl: 'https://example.com/video2.mp4',
       ),
     ],
+    creatorId: 'c1',
+    price: 49.99,
+    isFree: false,
+    enrollmentCount: 123,
+  ),
+  Course(
+    id: '2',
+    title: 'Advanced Mathematics',
+    description: 'Master complex mathematical concepts with clear explanations',
+    imageUrl: 'https://placehold.co/600x400/e74c3c/FFFFFF.png?text=Math',
+    category: 'Mathematics',
+    duration: 1080, // 18 hours
+    lessonsCount: 36,
+    rating: 4.5,
+    lessons: [
+      Lesson(
+        id: '2_1',
+        title: 'Introduction to Calculus',
+        description: 'Basic concepts of differentiation and integration',
+        duration: 20,
+        videoUrl: 'https://example.com/video3.mp4',
+        isPreview: true,
+      ),
+      Lesson(
+        id: '2_2',
+        title: 'Limits and Continuity',
+        description: 'Understanding limits and continuous functions',
+        duration: 30,
+        videoUrl: 'https://example.com/video4.mp4',
+      ),
+    ],
+    creatorId: 'c2',
+    price: 39.99,
+    isFree: false,
+    enrollmentCount: 87,
   ),
   Course(
     id: '3',
     title: 'Introduction to Physics',
-    description:
-        'Discover the fundamental principles of physics and how they explain the world around us.',
+    description: 'Learn the fundamental principles of physics and mechanics',
     imageUrl: 'https://placehold.co/600x400/2ecc71/FFFFFF.png?text=Physics',
     category: 'Science',
-    duration: 360, // 6 hours
-    lessonsCount: 8,
+    duration: 960, // 16 hours
+    lessonsCount: 32,
     rating: 4.7,
-    creatorId: 'c3', // Dr. Michael Chen
-    price: 39.99,
-    isFree: false,
     lessons: [
       Lesson(
-        id: '3-1',
+        id: '3_1',
         title: 'Newton\'s Laws of Motion',
-        description:
-            'Understanding the three laws that form the foundation of classical mechanics',
-        duration: 40,
-        videoUrl: 'https://example.com/newtons-laws',
+        description: 'Understanding the three fundamental laws of motion',
+        duration: 25,
+        videoUrl: 'https://example.com/video5.mp4',
         isPreview: true,
       ),
+      Lesson(
+        id: '3_2',
+        title: 'Work, Energy, and Power',
+        description: 'Understanding how force produces work and energy',
+        duration: 30,
+        videoUrl: 'https://example.com/video6.mp4',
+      ),
     ],
+    creatorId: 'c3',
+    price: 29.99,
+    isFree: false,
+    enrollmentCount: 105,
   ),
   Course(
     id: '4',
-    title: 'Spanish for Beginners',
+    title: 'Web Development Basics',
     description:
-        'Start your journey to Spanish fluency with this comprehensive beginner course.',
-    imageUrl: 'https://placehold.co/600x400/9b59b6/FFFFFF.png?text=Spanish',
-    category: 'Language',
-    duration: 480, // 8 hours
-    lessonsCount: 15,
+        'Start your journey into web development with HTML, CSS, and JavaScript',
+    imageUrl: 'https://placehold.co/600x400/9b59b6/FFFFFF.png?text=Web',
+    category: 'Programming',
+    duration: 840, // 14 hours
+    lessonsCount: 28,
     rating: 4.6,
-    creatorId: 'c2', // Dr. Rebecca Johnson
-    price: 34.99,
-    isFree: false,
     lessons: [
       Lesson(
-        id: '4-1',
-        title: 'Basic Greetings and Introductions',
-        description:
-            'Learn how to introduce yourself and greet others in Spanish',
-        duration: 30,
-        videoUrl: 'https://example.com/spanish-intro',
+        id: '4_1',
+        title: 'HTML Fundamentals',
+        description: 'Learn the basics of HTML markup language',
+        duration: 20,
+        videoUrl: 'https://example.com/video7.mp4',
         isPreview: true,
       ),
+      Lesson(
+        id: '4_2',
+        title: 'CSS Styling',
+        description: 'Make your websites beautiful with CSS',
+        duration: 25,
+        videoUrl: 'https://example.com/video8.mp4',
+      ),
     ],
+    creatorId: 'c1',
+    price: 0,
+    isFree: true,
+    enrollmentCount: 215,
   ),
   Course(
     id: '5',
-    title: 'Drawing Fundamentals',
-    description:
-        'Learn the core principles of drawing and artistic expression.',
-    imageUrl: 'https://placehold.co/600x400/f39c12/FFFFFF.png?text=Drawing',
+    title: 'Digital Art for Beginners',
+    description: 'Learn the basics of digital art and illustration',
+    imageUrl: 'https://placehold.co/600x400/1abc9c/FFFFFF.png?text=Art',
     category: 'Arts',
-    duration: 390, // 6.5 hours
-    lessonsCount: 9,
+    duration: 720, // 12 hours
+    lessonsCount: 24,
     rating: 4.9,
-    creatorId: 'c1', // Professor Smith
-    price: 0.0,
-    isFree: true, // Free course
     lessons: [
       Lesson(
-        id: '5-1',
-        title: 'Understanding Perspective',
-        description:
-            'Master the principles of linear perspective for realistic drawings',
-        duration: 45,
-        videoUrl: 'https://example.com/perspective-drawing',
+        id: '5_1',
+        title: 'Digital Drawing Basics',
+        description: 'Learn to use digital drawing tools effectively',
+        duration: 30,
+        videoUrl: 'https://example.com/video9.mp4',
+        isPreview: true,
+      ),
+      Lesson(
+        id: '5_2',
+        title: 'Color Theory',
+        description: 'Understanding color combinations and palettes',
+        duration: 25,
+        videoUrl: 'https://example.com/video10.mp4',
       ),
     ],
+    creatorId: 'c3',
+    price: 19.99,
+    isFree: false,
+    enrollmentCount: 78,
   ),
 ];

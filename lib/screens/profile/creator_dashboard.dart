@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import '../../data/sample_users.dart';
 import '../../data/sample_data.dart';
 import '../../models/course.dart';
+import '../../widgets/expandable_fab.dart';
+import '../../widgets/video_upload_sheet.dart';
+import '../../widgets/quiz_creation_sheet.dart';
+import '../../widgets/resource_upload_sheet.dart';
 import 'create_course_screen.dart';
 
 class CreatorDashboardScreen extends StatefulWidget {
@@ -40,16 +44,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const CreateCourseScreen()),
-          );
-        },
-        icon: const Icon(Icons.add),
-        label: const Text('New Course'),
-      ),
+      floatingActionButton: _buildExpandableFab(),
     );
   }
 
@@ -629,6 +624,111 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildExpandableFab() {
+    return ExpandableFab(
+      distance: 112.0,
+      children: [
+        ActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const CreateCourseScreen(),
+              ),
+            );
+          },
+          icon: const Icon(Icons.book),
+          label: 'New Course',
+        ),
+        ActionButton(
+          onPressed: () {
+            _showAddContentDialog(context);
+          },
+          icon: const Icon(Icons.video_library),
+          label: 'Add Videos',
+        ),
+        ActionButton(
+          onPressed: () {
+            _showCreateQuizDialog(context);
+          },
+          icon: const Icon(Icons.quiz),
+          label: 'New Quiz',
+        ),
+        ActionButton(
+          onPressed: () {
+            _showUploadResourcesDialog(context);
+          },
+          icon: const Icon(Icons.upload_file),
+          label: 'Resources',
+        ),
+      ],
+    );
+  }
+
+  void _showAddContentDialog(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder:
+          (context) => DraggableScrollableSheet(
+            initialChildSize: 0.7,
+            maxChildSize: 0.9,
+            minChildSize: 0.5,
+            expand: false,
+            builder: (context, scrollController) {
+              return VideoUploadBottomSheet(scrollController: scrollController);
+            },
+          ),
+    );
+  }
+
+  void _showCreateQuizDialog(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder:
+          (context) => DraggableScrollableSheet(
+            initialChildSize: 0.7,
+            maxChildSize: 0.9,
+            minChildSize: 0.5,
+            expand: false,
+            builder: (context, scrollController) {
+              return QuizCreationBottomSheet(
+                scrollController: scrollController,
+              );
+            },
+          ),
+    );
+  }
+
+  void _showUploadResourcesDialog(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder:
+          (context) => DraggableScrollableSheet(
+            initialChildSize: 0.7,
+            maxChildSize: 0.9,
+            minChildSize: 0.5,
+            expand: false,
+            builder: (context, scrollController) {
+              return ResourceUploadBottomSheet(
+                scrollController: scrollController,
+              );
+            },
+          ),
     );
   }
 }
