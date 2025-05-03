@@ -6,18 +6,20 @@ A new Flutter project.
 
 Below are some screenshots from the app:
 
-![Screenshot 1](photos/IMG-20250503-WA0016.jpg)  
-![Screenshot 2](photos/IMG-20250503-WA0017.jpg)  
-![Screenshot 3](photos/IMG-20250503-WA0018.jpg)  
-![Screenshot 4](photos/IMG-20250503-WA0019.jpg)  
-![Screenshot 5](photos/IMG-20250503-WA0020.jpg)  
-![Screenshot 6](photos/IMG-20250503-WA0021.jpg)  
-![Screenshot 7](photos/IMG-20250503-WA0022.jpg)  
-![Screenshot 8](photos/IMG-20250503-WA0023.jpg)  
-![Screenshot 9](photos/IMG-20250503-WA0024.jpg)  
-![Screenshot 10](photos/IMG-20250503-WA0025.jpg)  
-![Screenshot 11](photos/IMG-20250503-WA0026.jpg)  
-![Screenshot 12](photos/IMG-20250503-WA0027.jpg)
+<div align="center">
+  <img src="photos/IMG-20250503-WA0016.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0017.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0018.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0019.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0020.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0021.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0022.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0023.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0024.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0025.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0026.jpg" width="200"/>
+  <img src="photos/IMG-20250503-WA0027.jpg" width="200"/>
+</div>
 
 ## Getting Started
 
